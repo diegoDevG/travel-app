@@ -20,7 +20,6 @@
 <script>
 // @ is an alias to /src
 import store from "@/store.js";
-console.log(store);
 
 export default {
   name: "Home",
