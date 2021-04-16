@@ -1,22 +1,31 @@
 <template>
   <div>
     <section class="destination">
-      <h1>{{ destination.name }}</h1>
-      <div class="destination details">
-        <img
-          :src="require(`@/assets/${destination.image}`)"
-          :alt="destination.name"
-        />
-        <p>{{ destination.description }}</p>
+      <h1 class="pt-6 text-gray-600 text-2xl">{{ destination.name }}</h1>
+      <div class="flex flex-col lg:flex-row">
+        <div>
+          <img
+            class="mx-auto"
+            :src="require(`@/assets/${destination.image}`)"
+            :alt="destination.name"
+          />
+        </div>
+        <div
+          class="flex-1 p-6 text-center leading-7 text-base md:text-left lg:pr-0"
+        >
+          <p>{{ destination.description }}</p>
+        </div>
       </div>
     </section>
     <section class="experiences">
-      <h2>Top experiences in {{ destination.name }}</h2>
-      <div class="cards">
+      <h2 class="pt-6 text-gray-600 text-2xl">
+        Top experiences in <strong>{{ destination.name }}</strong>
+      </h2>
+      <div class="cards flex">
         <div
           v-for="experience in destination.experiences"
           :key="experience.slug"
-          class="card"
+          class="pr-4 last:p-0 relative"
         >
           <router-link
             :to="{
@@ -24,11 +33,16 @@
               params: { experienceSlug: experience.slug },
             }"
           >
-            <img
-              :src="require(`@/assets/${experience.image}`)"
-              :alt="experience.name"
-            />
-            <span>{{ experience.name }}</span>
+            <div>
+              <img
+                :src="require(`@/assets/${experience.image}`)"
+                :alt="experience.name"
+              />
+            </div>
+            <span
+              class="text-gray-100 text-base absolute inset-0 flex justify-center items-center font-extrabold"
+              >{{ experience.name }}</span
+            >
           </router-link>
         </div>
       </div>

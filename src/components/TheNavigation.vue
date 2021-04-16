@@ -1,11 +1,17 @@
 <template>
-  <div class="nav">
-    <p>The travel app</p>
-    <ul>
-      <li>
+  <div class="flex pr-2 justify-between items-center p-3 font-bold">
+    <router-link class="pr-3 text-purple-600 text-2xl" to="/">
+      The Travel App
+    </router-link>
+    <ul class="hidden md:flex">
+      <li class="pr-3">
         <router-link to="/"> Home </router-link>
       </li>
-      <li v-for="destination in destinations" :key="destination.name">
+      <li
+        class="pr-3"
+        v-for="destination in destinations"
+        :key="destination.name"
+      >
         <router-link
           :to="{
             name: 'DestinationDetails',
@@ -32,21 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.nav {
-  display: flex;
-  justify-content: center;
-}
-
-.nav {
-  padding: 30px;
-}
-
-.nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.nav a.router-link-exact-active {
+.router-link-exact-active {
   color: #42b983;
 }
 </style>
