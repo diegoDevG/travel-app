@@ -1,7 +1,6 @@
 <template>
-  <section>
-    <h2>Experiences</h2>
-    <h3 class="pt-6 text-gray-600 text-2xl">{{ experience.name }}</h3>
+  <section class="pt-20">
+    <h3 class="pt-6 text-gray-600 text-3xl">{{ experience.name }}</h3>
     <div class="flex flex-col lg:flex-row">
       <div class="mx-auto">
         <img
@@ -10,7 +9,7 @@
         />
       </div>
       <div
-        class="flex-1 p-6 text-center leading-7 text-base md:text-left lg:pr-0"
+        class="flex-1 p-6 text-center leading-7 text-2xl md:text-left lg:pr-0"
       >
         <p>{{ experience.description }}</p>
       </div>

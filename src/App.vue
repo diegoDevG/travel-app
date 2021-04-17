@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="max-w-screen-xl mx-auto">
+  <div id="app" class="max-w-screen-xl mx-auto bg-gray-50">
     <TheNavigation />
     <router-view />
   </div>

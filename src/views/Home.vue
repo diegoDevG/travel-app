@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="p-3 text-gray-600 text-2xl">All destinations</h1>
+    <h1 class="p-3 text-gray-600 text-3xl font-bold">All destinations</h1>
     <div class="flex flex-col items-center md:flex-row">
       <div
         class="p-3"
@@ -13,7 +13,9 @@
             params: { slug: destination.slug },
           }"
         >
-          <h2 class="pt-6 text-gray-600 text-2xl">{{ destination.name }}</h2>
+          <h2 class="p-6 text-gray-600 text-3xl font-bold">
+            {{ destination.name }}
+          </h2>
         </router-link>
         <figure>
           <router-link
